@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "master"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adaeze-k/my-portfolio.git"
+    "url": "git+https://github.io/Adaeze-k/my-portfolio.git"
   },
   "keywords": [],
   "author": "",

@@ -32,13 +32,6 @@ body {
   position: relative;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-
 header h1,
 header a,
 .text p,
@@ -63,7 +56,137 @@ a {
   bottom: 50%;
   transform: translateY(-50%);
 }
-/*End global*/
+/*End global*
+
+/*Start header*/
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.top-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  z-index: 50;
+  background-color: #0a0a0a;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transition: all 650ms cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  font-family: 'The Historia Demo', sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.nav-link:hover,
+.nav-link:focus {
+  background: linear-gradient(to top, #ffe838, #d6440a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.top-nav.open {
+  top: 0;
+  border-radius: initial;
+}
+
+.menu-toggler {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1500;
+  transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open {
+  transform: rotate(-45deg);
+}
+
+.bar {
+  background: linear-gradient(to right, #ffe838, #d6440a);
+  width: 100%;
+  height: 4px;
+}
+
+.bar.half {
+  width: 50%;
+}
+
+.bar.start {
+  transform-origin: right;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start {
+  transform: rotate(-450deg) translateX(0.8rem);
+}
+
+.bar.end {
+  align-self: flex-end;
+  transform-origin: left;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end {
+  transform: rotate(-450deg) translateX(-0.8rem);
+}
+
+.landing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.landing-text h1 {
+  font-size: 17rem;
+  font-family: 'The Historia Demo', sans-serif;
+  background: linear-gradient(to top, #ffe838, #fd575f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  user-select: none;
+}
+
+.landing-text h6 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+}
+
+/*End header*/
 
 .main-info-section {
   height: calc(100vh - 81.6px);
@@ -148,17 +271,18 @@ span.m-left {
 .about {
   height: 100vh;
   margin-top: 100px;
+  width: 90%;
 }
 
 .about h1,
 .work h1 {
-  font-size: 10rem;
+  font-size: 9rem;
   z-index: 0;
   opacity: 0.1;
 }
 
 .about-me-info {
-  max-width: 900px;
+  max-width: 850px;
   background-color: #252627;
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.25);
   padding: 50px;
@@ -172,6 +296,7 @@ span.m-left {
 
 .about-me-info p {
   font-size: 1.3rem;
+  font-style: oblique;
   color: #bebebe;
 }
 
@@ -192,17 +317,19 @@ span.m-left {
 .skills {
   height: 100vh;
   margin-top: 50px;
+  width: 90%;
 }
 
 .skills h1,
 .contact h1 {
   text-align: right;
-  font-size: 10rem;
+  font-size: 9rem;
   opacity: 0.1;
 }
 
 .skills-info {
   font-size: 1.4rem;
+  font-style: oblique;
   color: #bebebe;
   max-width: 800px;
   position: relative;
@@ -210,14 +337,14 @@ span.m-left {
   right: 50%;
   transform: translateX(-50%);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 div[class^='tag-'] {
@@ -261,7 +388,9 @@ div[class^='bar-'] {
 }
 
 .work {
-  margin-top: 200px; /*work top*/
+  height: 100vh;
+  margin-top: 50px;
+  width: 90%; /*work top*/
 }
 
 .work-category button {
@@ -281,7 +410,7 @@ div[class^='category-'] {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .work a {
@@ -314,7 +443,9 @@ div.hideCategory {
 /*Start contact*/
 
 .contact {
-  margin-top: 50px;
+  height: 100vh;
+  margin-top: 90px;
+  width: 90%;
 }
 
 form input,
@@ -324,9 +455,10 @@ form textarea {
   padding: 20px;
   background-color: #252627;
   border: 3px solid #707070;
-  margin: 20px 0;
+  margin: 10px 0;
   outline: none;
   font-size: 1.2rem;
+  font-style: oblique;
   color: #fff;
   position: relative;
   left: 50%;
@@ -344,15 +476,13 @@ form input:last-child {
 /*End contact*/
 
 /*Start footer*/
-footer hr {
-  margin-top: 80px;
-}
 
 footer p {
   text-align: center;
   color: #707070;
   font-size: 1.2rem;
   padding: 30px 0;
+  margin-top: 100px;
 }
 
 .up {
@@ -360,7 +490,6 @@ footer p {
   width: 3rem;
   height: 3rem;
   background-color: #eee;
-
   right: 5rem;
   border-radius: 100%;
   display: flex;
@@ -370,138 +499,10 @@ footer p {
 
 .up i {
   color: #0a0a0a;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: auto;
 }
 /*End footer*/
-
-/*Start header*/
-header {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-.top-nav {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: -100vh;
-  z-index: 50;
-  background-color: #0a0a0a;
-  border-bottom-right-radius: 100%;
-  border-bottom-left-radius: 100%;
-  transition: all 650ms cubic-bezier(1, 0, 0, 1);
-}
-
-.nav-list {
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-li {
-  margin: 0 2rem;
-}
-
-.nav-link {
-  font-family: 'The Historia Demo', sans-serif;
-  font-size: 3rem;
-  padding: 1rem;
-}
-.nav-link:hover,
-.nav-link:focus {
-  background: linear-gradient(to top, #ffe838, #d6440a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.top-nav.open {
-  top: 0;
-  border-radius: initial;
-}
-
-.menu-toggler {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  width: 4rem;
-  height: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 1500;
-  transition: transform 650ms ease-out;
-}
-
-.menu-toggler.open {
-  transform: rotate(-45deg);
-}
-
-.bar {
-  background: linear-gradient(to right, #ffe838, #d6440a);
-  width: 100%;
-  height: 4px;
-}
-
-.bar.half {
-  width: 50%;
-}
-
-.bar.start {
-  transform-origin: right;
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.start {
-  transform: rotate(-450deg) translateX(0.8rem);
-}
-
-.bar.end {
-  align-self: flex-end;
-  transform-origin: left;
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.end {
-  transform: rotate(-450deg) translateX(-0.8rem);
-}
-
-.landing-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-
-.landing-text h1 {
-  font-size: 20rem;
-  font-family: 'The Historia Demo', sans-serif;
-  background: linear-gradient(to top, #ffe838, #fd575f);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 1rem;
-  user-select: none;
-}
-
-.landing-text h6 {
-  font-size: 2rem;
-  font-weight: 300;
-  color: #fff;
-}
-
-/*End header*/
 
 /*Start animations*/
 @keyframes pulse {
