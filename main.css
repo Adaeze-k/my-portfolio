@@ -526,251 +526,145 @@ footer p {
 }
 /*End animations*/
 
-/*Start media queries
+/*Start media queries*/
 @media screen and (max-width: 700px) {
+  .menu-toggler {
+    right: 3.5rem;
+  }
   .landing-text {
-    top: 30%;
+    top: 50%;
+    bottom: 20%;
   }
   .landing-text h1 {
-    font-size: 10rem;
+    font-size: 8rem;
   }
   .landing-text h6 {
     font-size: 1.5rem;
   }
   .nav-list {
     flex-direction: column;
-    height: 50%;
+    height: 90%;
   }
   li {
     margin: 1rem 0;
   }
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  .profile-image img {
+    display: none;
   }
   .main-info-section {
     height: calc(100vh - 91.6px);
   }
-  .text {
-    margin-top: 20px;
-  }
-
-  .text h1 {
-    color: #fff;
-    font-size: 2.3rem;
-    cursor: context-menu;
-    margin-left: 2.5rem;
-  }
-  .text p {
-    letter-spacing: 2px;
-    word-spacing: 8px;
-    font-size: 1rem;
-    margin-left: 3rem;
-    margin-top: 1rem;
-  }
-  .profile-image img {
-    width: 300px;
-    margin-top: 10px; /*here
-    margin-right: 80px;
-  }
   .about {
-    margin-top: 10px;
-  }
-
-  .about h1,
-  .work h1 {
-    font-size: 8rem;
+    width: 85%;
+    margin-top: 100px;
+    vertical-align: text-bottom;
   }
 
   .about-me-info {
-    max-width: 700px;
-    padding: 50px;
-    top: -70px;
-    left: 50%;
-    right: 50%;
-  }
-
-  .about-me-info p {
-    font-size: 1rem;
-  }
-  .skills {
-    margin-top: 30px;
-  }
-
-  .skills h1,
-  .contact h1 {
-    font-size: 7rem;
-  }
-
-  .skills-info {
-    font-size: 1.2rem;
-    color: #bebebe;
-    margin-bottom: 50px;
-  }
-
-  .html {
-    margin-bottom: 25px;
-  }
-
-  div[class^='tag-'] {
-    width: 100px;
-    height: 30px;
-  }
-
-  div[class^='tag-'] p {
-    padding-left: 10px;
-    font-size: 1.1rem;
-    padding-top: 2.5px;
-  }
-
-  .progressbar {
-    position: relative;
-    width: 550px;
-    height: 20px;
-  }
-
-  .bar-html,
-  .bar-css,
-  .bar-javascript,
-  .bar-react {
-    width: calc(0 - 4px);
-  }
-
-  .work-category button {
-    border: 2.5px solid #d6440a;
-    padding: 12px 25px;
-    border-radius: 45px;
-    font-size: 1rem;
-  }
-  .work a img {
-    width: 250px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .menu-toggler {
-    top: 2rem;
-    right: 2rem;
-  }
-  .landing-text h1 {
-    font-size: 8rem;
-  }
-  .landing-text h6 {
-    font-size: 1.2rem;
-  }
-  .nav-list {
-    height: 100%;
-  }
-  li {
-    margin: 0.5rem 0;
-  }
-  .nav-link {
-    font-size: 1.5rem;
-  }
-  .main-info-section {
-    height: calc(100vh - 91.6px);
-    width: 90%;
-  }
-  .text {
+    max-width: 500px;
     margin-top: 20px;
   }
-
-  .text h1 {
-    color: #fff;
-    font-size: 2.3rem;
-    cursor: context-menu;
-    margin-left: 2.5rem;
-  }
-  .text p {
-    letter-spacing: 2px;
-    word-spacing: 8px;
-    font-size: 1rem;
-    margin-left: 3rem;
-    margin-top: 1rem;
-  }
-  .profile-image img {
-    width: 300px;
-    margin-top: 10px; /*here*
-    margin-right: 80px;
-  }
-  .about {
-    margin-top: 10px;
-    width: 80%;
-  }
-
-  .about h1,
-  .work h1 {
-    font-size: 8rem;
-  }
-
-  .about-me-info {
-    max-width: 700px;
-    padding: 50px;
-    top: -70px;
-    left: 50%;
-    right: 50%;
-  }
-
-  .about-me-info p {
-    font-size: 1rem;
+  .text {
+    margin-left: 1rem;
   }
   .skills {
-    margin-top: 30px;
+    margin-top: 150px;
     width: 80%;
   }
-
   .skills h1,
+  .about h1 {
+    font-size: 7rem;
+  }
+  .progressbar {
+    width: 400px;
+  }
+  .work {
+    margin-top: 90px;
+    width: 80%;
+  }
+  .work-category button {
+    padding: 10px 20px;
+  }
+  .work h1,
   .contact h1 {
     font-size: 7rem;
   }
-
-  .skills-info {
-    font-size: 1.2rem;
-    color: #bebebe;
-    margin-bottom: 50px;
-  }
-
-  .html {
-    margin-bottom: 25px;
-  }
-
-  div[class^='tag-'] {
-    width: 100px;
-    height: 30px;
-  }
-
-  div[class^='tag-'] p {
-    padding-left: 10px;
-    font-size: 1.1rem;
-    padding-top: 2.5px;
-  }
-
-  .progressbar {
-    position: relative;
-    width: 550px;
-    height: 20px;
-  }
-
-  .bar-html,
-  .bar-css,
-  .bar-javascript,
-  .bar-react {
-    width: calc(0 - 4px);
-  }
-
-  .work-category button {
-    border: 2.5px solid #d6440a;
-    padding: 12px 25px;
-    border-radius: 45px;
-    font-size: 1rem;
-  }
   .work a img {
-    width: 250px;
+    width: 200px;
+  }
+  div[class^='category-'] {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
   }
   .contact {
-    margin-bottom: 200px;
+    margin-top: 200px;
+    width: 80%;
+  }
+}
+/* second query*/
+@media screen and (max-width: 500px) {
+  .landing-text h1 {
+    font-size: 6rem;
+  }
+
+  .about {
+    width: 80%;
+  }
+
+  .text {
+    width: 90%;
+  }
+  .skills {
+    margin-top: 200px;
+    width: 75%;
+  }
+  .skills h1,
+  .about h1 {
+    font-size: 6rem;
+  }
+  .progressbar {
+    width: 200px;
+  }
+  .work {
+    margin-top: 150px;
+    width: 80%;
+  }
+  .work a {
+    position: absolute;
+  }
+  .work-category button {
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 40px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .work h1,
+  .contact h1 {
+    font-size: 6rem;
+  }
+
+  .contact {
+    margin-top: 10px;
+    width: 70%;
   }
   .up {
     width: 2.5rem;
     height: 2.5rem;
+  }
+  form input,
+  form textarea {
+    width: 350px;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  .up {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 2.5rem;
   }
 }
 /*End media queries*/
