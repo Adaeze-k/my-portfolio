@@ -10,6 +10,14 @@ html {
   scroll-behavior: smooth;
 }
 
+@import url(https://db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo);
+
+@font-face {
+  font-family: 'The Historia Demo';
+  src: url('https://db.onlinewebfonts.com/t/0923ee644c97a87d70269aa80a6f1e79.ttf')
+    format('truetype');
+}
+
 nav ul,
 .main-info-section,
 .work-category {
@@ -428,7 +436,7 @@ button.active {
 }
 
 .work a img {
-  width: 350px;
+  width: 300px;
   justify-self: center;
 }
 
@@ -444,7 +452,7 @@ div.hideCategory {
 
 .contact {
   height: 100vh;
-  margin-top: 90px;
+  margin-top: 150px;
   width: 90%;
 }
 
@@ -518,8 +526,8 @@ footer p {
 }
 /*End animations*/
 
-/*Start media queries*/
-@media screen and (max-width: 768px) {
+/*Start media queries
+@media screen and (max-width: 700px) {
   .landing-text {
     top: 30%;
   }
@@ -561,7 +569,7 @@ footer p {
   }
   .profile-image img {
     width: 300px;
-    margin-top: 10px; /*here*/
+    margin-top: 10px; /*here
     margin-right: 80px;
   }
   .about {
@@ -637,7 +645,7 @@ footer p {
     width: 250px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .menu-toggler {
     top: 2rem;
     right: 2rem;
@@ -657,8 +665,112 @@ footer p {
   .nav-link {
     font-size: 1.5rem;
   }
-  form {
-    width: 100%;
+  .main-info-section {
+    height: calc(100vh - 91.6px);
+    width: 90%;
+  }
+  .text {
+    margin-top: 20px;
+  }
+
+  .text h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    cursor: context-menu;
+    margin-left: 2.5rem;
+  }
+  .text p {
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    font-size: 1rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .profile-image img {
+    width: 300px;
+    margin-top: 10px; /*here*
+    margin-right: 80px;
+  }
+  .about {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .about h1,
+  .work h1 {
+    font-size: 8rem;
+  }
+
+  .about-me-info {
+    max-width: 700px;
+    padding: 50px;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+  }
+
+  .about-me-info p {
+    font-size: 1rem;
+  }
+  .skills {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .skills h1,
+  .contact h1 {
+    font-size: 7rem;
+  }
+
+  .skills-info {
+    font-size: 1.2rem;
+    color: #bebebe;
+    margin-bottom: 50px;
+  }
+
+  .html {
+    margin-bottom: 25px;
+  }
+
+  div[class^='tag-'] {
+    width: 100px;
+    height: 30px;
+  }
+
+  div[class^='tag-'] p {
+    padding-left: 10px;
+    font-size: 1.1rem;
+    padding-top: 2.5px;
+  }
+
+  .progressbar {
+    position: relative;
+    width: 550px;
+    height: 20px;
+  }
+
+  .bar-html,
+  .bar-css,
+  .bar-javascript,
+  .bar-react {
+    width: calc(0 - 4px);
+  }
+
+  .work-category button {
+    border: 2.5px solid #d6440a;
+    padding: 12px 25px;
+    border-radius: 45px;
+    font-size: 1rem;
+  }
+  .work a img {
+    width: 250px;
+  }
+  .contact {
+    margin-bottom: 200px;
+  }
+  .up {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 /*End media queries*/
